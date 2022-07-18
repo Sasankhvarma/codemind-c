@@ -1,16 +1,21 @@
 #include<stdio.h>
-int main()
+int fac(int n)
 {
-    int n,i,s=0,j;
-    scanf("%d",&n);
-    for(i=1;i<=n/2;i++)
+    int s=0,i;
+    for(i=1;i<n;i++)
     {
         if(n%i==0)
         {
             s=s+i;
         }
     }
-    if(s>n)
+    return s;
+}
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    if(fac(n)>n)
     {
         printf("True");
     }
